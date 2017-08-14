@@ -1,0 +1,21 @@
+﻿ToDo
+
+- cambios en firebase, script02, index ok
+
+- buscar "set hour" en javascript
+
+- Para que "$.grep"
+
+- buscar documentacion sobre "firebase.initializeApp" (uso)
+
+- setGiftAidersList. activar "saveData" y las actualizaciones de "div" y sbList.
+
+- crear: setItemsShopFloorList
+         setDonationsList
+         setStaffList
+         setResumeList
+  a partir de setGiftAidersList.
+
+- convertir script02.js en txt y cargarlo en firebase, leerlo desde firebase en "index.html"  (para al final).
+
+- generar webview con xamarin.

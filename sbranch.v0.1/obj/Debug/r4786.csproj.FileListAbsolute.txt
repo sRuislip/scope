@@ -1,0 +1,6 @@
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\bin\scope.r4786v1.0.dll.config
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\bin\scope.r4786v1.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\bin\scope.r4786v1.0.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\obj\Debug\r4786.csprojResolveAssemblyReference.cache
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\obj\Debug\scope.r4786v1.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\r4786\obj\Debug\scope.r4786v1.0.pdb

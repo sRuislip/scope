@@ -1,0 +1,8 @@
+Scope.MainActivity, Scope;md5caace483def0a1bf65a7ee77458aca76.MainActivity
+Scope.MainActivity, Scope, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md5caace483def0a1bf65a7ee77458aca76.MainActivity
+Scope.MainActivity;md5caace483def0a1bf65a7ee77458aca76.MainActivity
+scope.MainActivity;md5caace483def0a1bf65a7ee77458aca76.MainActivity
+Scope.MainActivity/HybridWebViewClient, Scope;md5caace483def0a1bf65a7ee77458aca76.MainActivity_HybridWebViewClient
+Scope.MainActivity+HybridWebViewClient, Scope, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md5caace483def0a1bf65a7ee77458aca76.MainActivity_HybridWebViewClient
+Scope.MainActivity.HybridWebViewClient;md5caace483def0a1bf65a7ee77458aca76.MainActivity_HybridWebViewClient
+scope.MainActivity_HybridWebViewClient;md5caace483def0a1bf65a7ee77458aca76.MainActivity_HybridWebViewClient

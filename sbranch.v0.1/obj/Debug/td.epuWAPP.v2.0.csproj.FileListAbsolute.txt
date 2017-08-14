@@ -1,0 +1,6 @@
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\bin\td.epuWAPPv2.0.dll.config
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\bin\td.epuWAPPv2.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\bin\td.epuWAPPv2.0.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\obj\Debug\td.epuWAPPv2.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\obj\Debug\td.epuWAPPv2.0.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\TransportDistribution\td.epu\td.epuWAPP\td.epuWAPP.v2.0\obj\Debug\td.epuWAPP.v2.0.csprojResolveAssemblyReference.cache

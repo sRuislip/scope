@@ -1,0 +1,6 @@
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\bin\scope.branchv0.1.dll.config
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\bin\scope.branchv0.1.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\bin\scope.branchv0.1.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\obj\Debug\sbranch.v0.1.csprojResolveAssemblyReference.cache
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\obj\Debug\scope.branchv0.1.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v0.1\obj\Debug\scope.branchv0.1.pdb

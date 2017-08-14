@@ -1,0 +1,15 @@
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\bin\Release\Scope.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\bin\Release\Scope.pdb
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\bin\Release\Scope.Scope.apk
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\bin\Release\Scope.Scope-Signed.apk
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\Scope.v2.0.csprojResolveAssemblyReference.cache
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\Scope.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\Scope.pdb
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\android\bin\Scope.Scope.apk
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\res\layout\main.xml
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\res\values\strings.xml
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\res\drawable\icon.png
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\R.cs.flag
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\Scope\Scope.android\obj\Release\uploadflags.txt
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\bin\Release\Scope.dll.mdb
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\Scope.dll.mdb

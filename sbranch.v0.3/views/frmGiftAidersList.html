@@ -1,0 +1,36 @@
+﻿<div id="divFacturas" class="row">
+    <br />
+    <div style="display: inline;">
+        <div align="center">
+            <input type="radio" name="facProcess" id="facAsignacion" value="asignacion" checked="checked" /> Asignation &nbsp;
+            <input type="radio" name="facProcess" id="facConsultas" value="consultas" checked="checked" /> Query
+        </div>
+        <script type="text/javascript">
+            $("#divFacturas input[name='facProcess']").change(function () {
+                map = undefined;
+                dirService = undefined;
+                dirRenderer = undefined;
+                route = undefined;
+                waypts = [];
+                bounds = undefined;
+                query = undefined;
+                markerArray = [];
+                infowindow = undefined;
+                tdPed = undefined;
+                pedidoClaveActual = undefined;
+                tdPedList = [];
+                tdWOrd = undefined;
+                if ($(this).val() == "consultas" && $(this).is(":checked"))
+                    facProcess = !1;
+                else
+                    facProcess = !0;
+                funcion = "setFacListaS";
+                _fn063();
+            });
+        </script>
+        facProcess ? &nbsp;&nbsp; <input id="che000" type="checkbox" class="pedidoChe" title="Seleccionar todo" />&nbsp;&nbsp;
+        <button id="remesa" class="btn btn-lg btn-info" disabled="disabled" style="font-size:80%;"> Consignment </button>
+        <div class="ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear" style="border:0;"><input data-type="search" id="filterControlgroup-input" style="border:0;"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text" style="border:0;">Clear text</a></div>
+    </div>\n'),
+    <div id="facturas" class="col-md-6" data-role="controlgroup" data-filter="true" data-input="#filterControlgroup-input"><button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button></div>'), t.push('<div id="mapa" class="col-md-6"><div id="mapCanvas" class="mapCanvas"></div>')) : (t.push('<div class="ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear" style="border:0;"><input data-type="search" id="filterControlgroup-input" style="border:0;"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text" style="border:0;">Clear text</a></div></div>\n'), t.push('<div id="facturas" class="col-md-6" data-role="controlgroup" data-filter="true" data-input="#filterControlgroup-input"><button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button></div>'), t.push('<div id="factura" class="col-md-6"></div>\n'));
+

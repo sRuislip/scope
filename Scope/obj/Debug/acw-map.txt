@@ -1,0 +1,4 @@
+Scope.MainActivity, Scope;md5d1617592405436affcd56ae1db7ba9d5.MainActivity
+Scope.MainActivity, Scope, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d1617592405436affcd56ae1db7ba9d5.MainActivity
+Scope.MainActivity;md5d1617592405436affcd56ae1db7ba9d5.MainActivity
+scope.MainActivity;md5d1617592405436affcd56ae1db7ba9d5.MainActivity

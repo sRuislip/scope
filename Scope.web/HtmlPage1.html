@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted {
+            cursor: pointer;
+            color: #000000;
+            background: #b1dcfb;
+        }
+
+        .picker__list-item:hover {
+            cursor: pointer;
+            color: #000000;
+            background: #b1dcfb;
+            border-color: #0089ec;
+            z-index: 10;
+        }
+
+        .picker__list-item--highlighted {
+            border-color: #0089ec;
+            z-index: 10;
+        }
+
+        .picker__list-item {
+            border-bottom: 1px solid #dddddd;
+            border-top: 1px solid #dddddd;
+            margin-bottom: -1px;
+            position: relative;
+            background: #ffffff;
+            padding: .75em 1.25em;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .picker__list {
+            list-style: none;
+            padding: 0.75em 0 4.2em;
+            margin: 0;
+        }
+
+        ul, menu, dir {
+            display: block;
+            list-style-type: disc;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 40px;
+        }
+
+        .picker--time .picker__box {
+            font-size: 1em;
+            background: #f2f2f2;
+            padding: 0;
+        }
+
+        .picker {
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.2;
+            color: #000000;
+            position: absolute;
+            z-index: 10000;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="fieldset fieldset--demo">
+        <div class="fieldset__wrapper">
+            <input class="fieldset__input js__timepicker picker__input picker__input--active" type="text" placeholder="Try me…" readonly="" id="P476814977" aria-haspopup="true" aria-expanded="true" aria-readonly="false" aria-owns="P476814977_root">
+            <div class="picker picker--time picker--opened picker--focused" id="P476814977_root" aria-hidden="false">
+                <div class="picker__holder" tabindex="-1" style="">
+                    <div class="picker__frame">
+                        <div class="picker__wrap">
+                            <div class="picker__box">
+                                <ul class="picker__list" role="listbox" aria-controls="P476814977">
+                                    <li class="picker__list-item" data-pick="0" role="option" aria-label="12:00 AM">12:00 AM</li>
+                                    <li class="picker__list-item" data-pick="30" role="option" aria-label="12:30 AM">12:30 AM</li>
+                                    <li class="picker__list-item" data-pick="60" role="option" aria-label="1:00 AM">1:00 AM</li>
+                                    <li class="picker__list-item" data-pick="90" role="option" aria-label="1:30 AM">1:30 AM</li>
+                                    <li class="picker__list-item" data-pick="120" role="option" aria-label="2:00 AM">2:00 AM</li>
+                                    <li class="picker__list-item" data-pick="150" role="option" aria-label="2:30 AM">2:30 AM</li>
+                                    <li class="picker__list-item" data-pick="180" role="option" aria-label="3:00 AM">3:00 AM</li>
+                                    <li class="picker__list-item" data-pick="210" role="option" aria-label="3:30 AM">3:30 AM</li>
+                                    <li class="picker__list-item" data-pick="240" role="option" aria-label="4:00 AM">4:00 AM</li>
+                                    <li class="picker__list-item" data-pick="270" role="option" aria-label="4:30 AM">4:30 AM</li>
+                                    <li class="picker__list-item" data-pick="300" role="option" aria-label="5:00 AM">5:00 AM</li>
+                                    <li class="picker__list-item" data-pick="330" role="option" aria-label="5:30 AM">5:30 AM</li>
+                                    <li class="picker__list-item" data-pick="360" role="option" aria-label="6:00 AM">6:00 AM</li>
+                                    <li class="picker__list-item" data-pick="390" role="option" aria-label="6:30 AM">6:30 AM</li>
+                                    <li class="picker__list-item" data-pick="420" role="option" aria-label="7:00 AM">7:00 AM</li>
+                                    <li class="picker__list-item" data-pick="450" role="option" aria-label="7:30 AM">7:30 AM</li>
+                                    <li class="picker__list-item" data-pick="480" role="option" aria-label="8:00 AM">8:00 AM</li>
+                                    <li class="picker__list-item" data-pick="510" role="option" aria-label="8:30 AM">8:30 AM</li>
+                                    <li class="picker__list-item" data-pick="540" role="option" aria-label="9:00 AM">9:00 AM</li>
+                                    <li class="picker__list-item" data-pick="570" role="option" aria-label="9:30 AM">9:30 AM</li>
+                                    <li class="picker__list-item" data-pick="600" role="option" aria-label="10:00 AM">10:00 AM</li>
+                                    <li class="picker__list-item" data-pick="630" role="option" aria-label="10:30 AM">10:30 AM</li>
+                                    <li class="picker__list-item" data-pick="660" role="option" aria-label="11:00 AM">11:00 AM</li><li class="picker__list-item" data-pick="690" role="option" aria-label="11:30 AM">11:30 AM</li><li class="picker__list-item" data-pick="720" role="option" aria-label="12:00 PM">12:00 PM</li><li class="picker__list-item" data-pick="750" role="option" aria-label="12:30 PM">12:30 PM</li><li class="picker__list-item" data-pick="780" role="option" aria-label="1:00 PM">1:00 PM</li><li class="picker__list-item" data-pick="810" role="option" aria-label="1:30 PM">1:30 PM</li><li class="picker__list-item" data-pick="840" role="option" aria-label="2:00 PM">2:00 PM</li><li class="picker__list-item" data-pick="870" role="option" aria-label="2:30 PM">2:30 PM</li><li class="picker__list-item" data-pick="900" role="option" aria-label="3:00 PM">3:00 PM</li><li class="picker__list-item" data-pick="930" role="option" aria-label="3:30 PM">3:30 PM</li><li class="picker__list-item" data-pick="960" role="option" aria-label="4:00 PM">4:00 PM</li><li class="picker__list-item" data-pick="990" role="option" aria-label="4:30 PM">4:30 PM</li><li class="picker__list-item" data-pick="1020" role="option" aria-label="5:00 PM">5:00 PM</li><li class="picker__list-item" data-pick="1050" role="option" aria-label="5:30 PM">5:30 PM</li><li class="picker__list-item" data-pick="1080" role="option" aria-label="6:00 PM">6:00 PM</li><li class="picker__list-item picker__list-item--highlighted picker__list-item--viewset" data-pick="1110" role="option" aria-label="6:30 PM" aria-activedescendant="true">6:30 PM</li><li class="picker__list-item" data-pick="1140" role="option" aria-label="7:00 PM">7:00 PM</li><li class="picker__list-item" data-pick="1170" role="option" aria-label="7:30 PM">7:30 PM</li><li class="picker__list-item" data-pick="1200" role="option" aria-label="8:00 PM">8:00 PM</li><li class="picker__list-item" data-pick="1230" role="option" aria-label="8:30 PM">8:30 PM</li><li class="picker__list-item" data-pick="1260" role="option" aria-label="9:00 PM">9:00 PM</li><li class="picker__list-item" data-pick="1290" role="option" aria-label="9:30 PM">9:30 PM</li><li class="picker__list-item" data-pick="1320" role="option" aria-label="10:00 PM">10:00 PM</li><li class="picker__list-item" data-pick="1350" role="option" aria-label="10:30 PM">10:30 PM</li><li class="picker__list-item" data-pick="1380" role="option" aria-label="11:00 PM">11:00 PM</li><li class="picker__list-item" data-pick="1410" role="option" aria-label="11:30 PM">11:30 PM</li>
+                                    <li role="presentation">
+                                        <button class="picker__button--clear" type="button" data-clear="1" aria-controls="P476814977">Clear</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="picker picker--time" id="P476814977_root" aria-hidden="true">
+                <div class="picker__holder" tabindex="-1" style="">
+                    <div class="picker__frame">
+                        <div class="picker__wrap">
+                            <div class="picker__box">
+                                <ul class="picker__list" role="listbox" aria-controls="P476814977">
+                                    <li class="picker__list-item" data-pick="0" role="option" aria-label="12:00 AM">12:00 AM</li>
+                                    <li class="picker__list-item" data-pick="30" role="option" aria-label="12:30 AM">12:30 AM</li>
+                                    <li class="picker__list-item" data-pick="60" role="option" aria-label="1:00 AM">1:00 AM</li>
+                                    <li class="picker__list-item" data-pick="90" role="option" aria-label="1:30 AM">1:30 AM</li>
+                                    <li class="picker__list-item" data-pick="120" role="option" aria-label="2:00 AM">2:00 AM</li>
+                                    <li class="picker__list-item" data-pick="150" role="option" aria-label="2:30 AM">2:30 AM</li><li class="picker__list-item" data-pick="180" role="option" aria-label="3:00 AM">3:00 AM</li><li class="picker__list-item" data-pick="210" role="option" aria-label="3:30 AM">3:30 AM</li><li class="picker__list-item" data-pick="240" role="option" aria-label="4:00 AM">4:00 AM</li><li class="picker__list-item" data-pick="270" role="option" aria-label="4:30 AM">4:30 AM</li><li class="picker__list-item" data-pick="300" role="option" aria-label="5:00 AM">5:00 AM</li><li class="picker__list-item" data-pick="330" role="option" aria-label="5:30 AM">5:30 AM</li><li class="picker__list-item" data-pick="360" role="option" aria-label="6:00 AM">6:00 AM</li><li class="picker__list-item" data-pick="390" role="option" aria-label="6:30 AM">6:30 AM</li><li class="picker__list-item" data-pick="420" role="option" aria-label="7:00 AM">7:00 AM</li><li class="picker__list-item" data-pick="450" role="option" aria-label="7:30 AM">7:30 AM</li><li class="picker__list-item" data-pick="480" role="option" aria-label="8:00 AM">8:00 AM</li><li class="picker__list-item" data-pick="510" role="option" aria-label="8:30 AM">8:30 AM</li><li class="picker__list-item" data-pick="540" role="option" aria-label="9:00 AM">9:00 AM</li><li class="picker__list-item" data-pick="570" role="option" aria-label="9:30 AM">9:30 AM</li><li class="picker__list-item" data-pick="600" role="option" aria-label="10:00 AM">10:00 AM</li><li class="picker__list-item" data-pick="630" role="option" aria-label="10:30 AM">10:30 AM</li><li class="picker__list-item" data-pick="660" role="option" aria-label="11:00 AM">11:00 AM</li><li class="picker__list-item" data-pick="690" role="option" aria-label="11:30 AM">11:30 AM</li><li class="picker__list-item" data-pick="720" role="option" aria-label="12:00 PM">12:00 PM</li><li class="picker__list-item" data-pick="750" role="option" aria-label="12:30 PM">12:30 PM</li><li class="picker__list-item" data-pick="780" role="option" aria-label="1:00 PM">1:00 PM</li><li class="picker__list-item" data-pick="810" role="option" aria-label="1:30 PM">1:30 PM</li><li class="picker__list-item" data-pick="840" role="option" aria-label="2:00 PM">2:00 PM</li><li class="picker__list-item" data-pick="870" role="option" aria-label="2:30 PM">2:30 PM</li><li class="picker__list-item" data-pick="900" role="option" aria-label="3:00 PM">3:00 PM</li><li class="picker__list-item" data-pick="930" role="option" aria-label="3:30 PM">3:30 PM</li><li class="picker__list-item" data-pick="960" role="option" aria-label="4:00 PM">4:00 PM</li><li class="picker__list-item" data-pick="990" role="option" aria-label="4:30 PM">4:30 PM</li><li class="picker__list-item" data-pick="1020" role="option" aria-label="5:00 PM">5:00 PM</li><li class="picker__list-item" data-pick="1050" role="option" aria-label="5:30 PM">5:30 PM</li><li class="picker__list-item" data-pick="1080" role="option" aria-label="6:00 PM">6:00 PM</li><li class="picker__list-item picker__list-item--selected picker__list-item--highlighted picker__list-item--viewset" data-pick="1110" role="option" aria-label="6:30 PM" aria-selected="true" aria-activedescendant="true">6:30 PM</li><li class="picker__list-item" data-pick="1140" role="option" aria-label="7:00 PM">7:00 PM</li><li class="picker__list-item" data-pick="1170" role="option" aria-label="7:30 PM">7:30 PM</li><li class="picker__list-item" data-pick="1200" role="option" aria-label="8:00 PM">8:00 PM</li><li class="picker__list-item" data-pick="1230" role="option" aria-label="8:30 PM">8:30 PM</li><li class="picker__list-item" data-pick="1260" role="option" aria-label="9:00 PM">9:00 PM</li><li class="picker__list-item" data-pick="1290" role="option" aria-label="9:30 PM">9:30 PM</li><li class="picker__list-item" data-pick="1320" role="option" aria-label="10:00 PM">10:00 PM</li><li class="picker__list-item" data-pick="1350" role="option" aria-label="10:30 PM">10:30 PM</li><li class="picker__list-item" data-pick="1380" role="option" aria-label="11:00 PM">11:00 PM</li>
+                                    <li class="picker__list-item" data-pick="1410" role="option" aria-label="11:30 PM">11:30 PM</li>
+                                    <li role="presentation">
+                                        <button class="picker__button--clear" type="button" data-clear="1" aria-controls="P476814977" disabled="disabled">Clear</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>

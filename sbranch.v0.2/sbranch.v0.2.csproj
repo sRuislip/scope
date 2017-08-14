@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{3780D847-99A1-4D1F-B3F5-0FBE9D0E9A91}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\app.css" />
+    <Content Include="Content\bootstrap.epu.css" />
+    <Content Include="Content\jquery.mobile-1.4.5.css" />
+    <Content Include="Content\jquery.mobile-1.4.5.min.css" />
+    <Content Include="Content\tether\tether-theme-arrows-dark.css" />
+    <Content Include="Content\tether\tether-theme-arrows-dark.min.css" />
+    <Content Include="Content\tether\tether-theme-arrows.css" />
+    <Content Include="Content\tether\tether-theme-arrows.min.css" />
+    <Content Include="Content\tether\tether-theme-basic.css" />
+    <Content Include="Content\tether\tether-theme-basic.min.css" />
+    <Content Include="Content\tether\tether.css" />
+    <Content Include="Content\tether\tether.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Images\1308001441853739087google maps pin.svg" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\546601,1316407736,2.jpg" />
+    <Content Include="Images\altavoz0.gif" />
+    <Content Include="Images\altavoz0.png" />
+    <Content Include="Images\altavoz1.gif" />
+    <Content Include="Images\altavoz1.png" />
+    <Content Include="Images\B4A.gif" />
+    <Content Include="Images\B60.gif" />
+    <Content Include="Images\B61.gif" />
+    <Content Include="Images\B62.gif" />
+    <Content Include="Images\B63.gif" />
+    <Content Include="Images\B64.gif" />
+    <Content Include="Images\B65.gif" />
+    <Content Include="Images\B66.gif" />
+    <Content Include="Images\B68.gif" />
+    <Content Include="Images\B69.gif" />
+    <Content Include="Images\B6A.gif" />
+    <Content Include="Images\backSlash.png" />
+    <Content Include="Images\bar.png" />
+    <Content Include="Images\barra%281%29.png" />
+    <Content Include="Images\barra.png" />
+    <Content Include="Images\blue-dot.png" />
+    <Content Include="Images\blue-pushpin.png" />
+    <Content Include="Images\blue.png" />
+    <Content Include="Images\btnAltavoz.png" />
+    <Content Include="Images\btnClose.png" />
+    <Content Include="Images\btnCurrent - Copy.png" />
+    <Content Include="Images\btnCurrent.png" />
+    <Content Include="Images\btnGPS-slash.png" />
+    <Content Include="Images\btnGPS.png" />
+    <Content Include="Images\btnMicrof-slash.png" />
+    <Content Include="Images\btnMicrof.png" />
+    <Content Include="Images\btnNext.png" />
+    <Content Include="Images\btnPrevious.png" />
+    <Content Include="Images\camion0.png" />
+    <Content Include="Images\camion1.png" />
+    <Content Include="Images\drag-icon.png" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favorite%281%29.jpg" />
+    <Content Include="Images\favorite%282%29.jpg" />
+    <Content Include="Images\favorite.jpg" />
+    <Content Include="Images\flag.png" />
+    <Content Include="Images\google-309740_640.png" />
+    <Content Include="Images\google_maps_full_2.png" />
+    <Content Include="Images\green-dot.png" />
+    <Content Include="Images\green.png" />
+    <Content Include="Images\greenloader.gif" />
+    <Content Include="Images\grn-pushpin.png" />
+    <Content Include="Images\Icon%280%29.png" />
+    <Content Include="Images\iconm.png" />
+    <Content Include="Images\Icon_00.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\info_circle.png" />
+    <Content Include="Images\ltblu-pushpin.png" />
+    <Content Include="Images\ltblue-dot.png" />
+    <Content Include="Images\maker_varios.jpg" />
+    <Content Include="Images\man.png" />
+    <Content Include="Images\marker%281%29.jpg" />
+    <Content Include="Images\marker%282%29.png" />
+    <Content Include="Images\marker-pin-google-md.png" />
+    <Content Include="Images\marker-pin-google.svg" />
+    <Content Include="Images\marker_green.jpg" />
+    <Content Include="Images\mic-animate.gif" />
+    <Content Include="Images\mic-slash.gif" />
+    <Content Include="Images\mic.gif" />
+    <Content Include="Images\mic0.png" />
+    <Content Include="Images\mic1.png" />
+    <Content Include="Images\msg.png" />
+    <Content Include="Images\msgbox_error.png" />
+    <Content Include="Images\msgbox_info.png" />
+    <Content Include="Images\msgbox_question.png" />
+    <Content Include="Images\msgbox_warn.png" />
+    <Content Include="Images\name.jpg" />
+    <Content Include="Images\omnibox-sprite-1x-20130906.png" />
+    <Content Include="Images\omnibox-sprite-2x-20130906.png" />
+    <Content Include="Images\pink-dot.png" />
+    <Content Include="Images\pink-pushpin.png" />
+    <Content Include="Images\pink.png" />
+    <Content Include="Images\purple-dot.png" />
+    <Content Include="Images\purple-pushpin.png" />
+    <Content Include="Images\purple.png" />
+    <Content Include="Images\qrcode%281%29.png" />
+    <Content Include="Images\qrcode%282%29.png" />
+    <Content Include="Images\red-dot.png" />
+    <Content Include="Images\red-pushpin.png" />
+    <Content Include="Images\red.png" />
+    <Content Include="Images\repeat-bg.png" />
+    <Content Include="Images\restaurant.png" />
+    <Content Include="Images\scope-logo.png" />
+    <Content Include="Images\scopeLogo.png" />
+    <Content Include="Images\select_marker_1.gif" />
+    <Content Include="Images\td-sprite-1x-20130906.png" />
+    <Content Include="Images\td-sprite-2x-20130906.png" />
+    <Content Include="Images\tipsy.gif" />
+    <Content Include="Images\truck.png" />
+    <Content Include="Images\unnamed %281%29.png" />
+    <Content Include="Images\unnamed.png" />
+    <Content Include="Images\woman.png" />
+    <Content Include="Images\yellow-dot.png" />
+    <Content Include="Images\yellow.png" />
+    <Content Include="Images\ylw-pushpin.png" />
+    <Content Include="Images\_basic.png" />
+    <Content Include="Images\_blue.png" />
+    <Content Include="Images\_blue0.png" />
+    <Content Include="Images\_blue1.png" />
+    <Content Include="Images\_blue2.png" />
+    <Content Include="Images\_blue3.png" />
+    <Content Include="Images\_blue4.png" />
+    <Content Include="Images\_blue5.png" />
+    <Content Include="Images\_green.png" />
+    <Content Include="Images\_green0.png" />
+    <Content Include="Images\_green1.png" />
+    <Content Include="Images\_green2.png" />
+    <Content Include="Images\_green3.png" />
+    <Content Include="Images\_green4.png" />
+    <Content Include="Images\_green5.png" />
+    <Content Include="Images\_red.png" />
+    <Content Include="Images\_red0.png" />
+    <Content Include="Images\_red1.png" />
+    <Content Include="Images\_red2.png" />
+    <Content Include="Images\_red3.png" />
+    <Content Include="Images\_red4.png" />
+    <Content Include="Images\_red5.png" />
+    <Content Include="Images\_yellow.png" />
+    <Content Include="Images\_yellow0.png" />
+    <Content Include="Images\_yellow1.png" />
+    <Content Include="Images\_yellow2.png" />
+    <Content Include="Images\_yellow3.png" />
+    <Content Include="Images\_yellow4.png" />
+    <Content Include="Images\_yellow5.png" />
+    <Content Include="index.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="packages.config" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\td.epuWAPP.v2.0.pubxml" />
+    <Content Include="Scripts\gpsWorkers.js" />
+    <Content Include="Scripts\jquery.qrcode.js" />
+    <Content Include="Scripts\jquery.qrcode.min.js" />
+    <Content Include="Scripts\qrcode.js" />
+    <Content Include="Scripts\qrcode.min.js" />
+    <Content Include="Scripts\qrcode_.js" />
+    <Content Include="Scripts\qrcode__.js" />
+    <Content Include="Scripts\script02.js" />
+    <Content Include="Scripts\sprintf.js" />
+    <Content Include="Scripts\webspeech.js" />
+    <Content Include="Scripts\webspeech.min.js" />
+    <Content Include="Views\frmAdminAdministrative.html" />
+    <Content Include="Views\frmAdminCompanies.html" />
+    <Content Include="Views\frmAdministrativeEmpresas.html" />
+    <Content Include="Views\frmAdministrativeFacturas.html" />
+    <Content Include="Views\frmAdministrativeOrdenesTrabajo.html" />
+    <Content Include="Views\frmAdministrativeSupervisores.html" />
+    <Content Include="Views\frmCarrierRemesa.html" />
+    <Content Include="Views\frmCustomer.html" />
+    <Content Include="Views\frmLanguages.html" />
+    <Content Include="Views\frmLogin.html" />
+    <Content Include="Views\frmLogout.html" />
+    <Content Include="Views\frmOverseeOrdenesTrabajo.html" />
+    <Content Include="Views\frmOverseeTransportistas.html" />
+    <Content Include="Views\frmRegister.html" />
+    <Content Include="Views\frmCarrierRutas.html" />
+    <Content Include="Views\frmAbout.html" />
+    <Content Include="Views\menu-head.html" />
+    <Content Include="Views\menu-options-Z.html" />
+    <Content Include="Views\menu-options-About.html" />
+    <Content Include="Views\menu-options-C.html" />
+    <Content Include="Views\menu-options-D.html" />
+    <Content Include="Views\menu-options-Login.html" />
+    <Content Include="Views\menu-options-O.html" />
+    <Content Include="Views\menu-options-A.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\qrcode.min.js.map" />
+    <Content Include="Scripts\jquery.qrcode.min.js.map" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>sbranch</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>sbranch.v0.2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62724</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8095</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

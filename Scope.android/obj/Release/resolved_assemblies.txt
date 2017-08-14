@@ -1,0 +1,8 @@
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\Scope.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\Java.Interop.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\Mono.Android.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\mscorlib.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\System.Core.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\System.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\System.Web.Services.dll
+C:\Users\vacaf\Documents\Visual Studio 2017\Projects\scope\Scope.android\obj\Release\android\assets\System.Runtime.Serialization.dll

@@ -1,0 +1,14 @@
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\bin\Debug\sbranch.v2.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\bin\Debug\sbranch.v2.0.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\bin\Debug\sbranch.v2.x_0.sbranch.v2.x_0.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\bin\Debug\sbranch.v2.x_0.sbranch.v2.x_0-Signed.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\sbranch.v2.0.csprojResolveAssemblyReference.cache
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\sbranch.v2.0.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\sbranch.v2.0.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\android\bin\sbranch.v2.x_0.sbranch.v2.x_0.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\res\layout\main.xml
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\res\values\strings.xml
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\res\drawable\icon.png
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\R.cs.flag
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\uploadflags.txt
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\sbranch.v2.0\obj\Debug\android\assets\sbranch.v2.0.dll.mdb

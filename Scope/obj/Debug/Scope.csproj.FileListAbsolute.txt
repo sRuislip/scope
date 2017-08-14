@@ -1,0 +1,15 @@
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\bin\Debug\Scope.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\bin\Debug\Scope.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\bin\Debug\Scope.Scope.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\bin\Debug\Scope.Scope-Signed.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\Scope.csprojResolveAssemblyReference.cache
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\Scope.dll
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\Scope.pdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\android\bin\Scope.Scope.apk
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\res\layout\main.xml
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\res\values\strings.xml
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\res\drawable\icon.png
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\R.cs.flag
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\uploadflags.txt
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\bin\Debug\Scope.dll.mdb
+C:\Users\vacaf\Documents\Visual Studio 2015\Projects\Scope\Scope\obj\Debug\android\assets\Scope.dll.mdb

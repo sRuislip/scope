@@ -1,0 +1,8 @@
+sbranch.v2._0.MainActivity, sbranch.v2.0;md59608db7b9fadb97caff370d896f7fd8a.MainActivity
+sbranch.v2._0.MainActivity, sbranch.v2.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59608db7b9fadb97caff370d896f7fd8a.MainActivity
+sbranch.v2._0.MainActivity;md59608db7b9fadb97caff370d896f7fd8a.MainActivity
+sbranch.v2._0.MainActivity;md59608db7b9fadb97caff370d896f7fd8a.MainActivity
+sbranch.v2._0.MainActivity/HybridWebViewClient, sbranch.v2.0;md59608db7b9fadb97caff370d896f7fd8a.MainActivity_HybridWebViewClient
+sbranch.v2._0.MainActivity+HybridWebViewClient, sbranch.v2.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59608db7b9fadb97caff370d896f7fd8a.MainActivity_HybridWebViewClient
+sbranch.v2._0.MainActivity.HybridWebViewClient;md59608db7b9fadb97caff370d896f7fd8a.MainActivity_HybridWebViewClient
+sbranch.v2._0.MainActivity_HybridWebViewClient;md59608db7b9fadb97caff370d896f7fd8a.MainActivity_HybridWebViewClient

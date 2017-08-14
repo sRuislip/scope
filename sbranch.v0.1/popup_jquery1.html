@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- Main page -->
+    <div data-role="page" id="main">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#settings">Settings</a>
+            <h1>Deeside</h1>
+        </div>
+        <div data-role="content" data-theme="d">
+            <div class="home">
+                <a data-role="button" href="#choicePopup" data-rel="popup" data-position-to="window" data-transition="slideup">Open popup with a link</a>
+                <a id="btnChoicePopup" data-role="button" href="#" data-rel="popup">Open popup programmatically</a>
+            </div>
+        </div>
+
+        <div data-role="popup" id="choicePopup" data-overlay-theme="b" data-theme="c" data-dismissible="false" class="ui-corner-all">
+            <div data-role="header" data-theme="a" class="ui-corner-top">
+                <h1></h1>
+            </div>
+            <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+                <h3 class="ui-title">Your decision has been made:</h3>
+                <a id="btnThanks" href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Thanks</a>
+                <a id="btnAgain" href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">Again!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div data-role="page" id="results">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#" data-rel="back" data-icon="arrow-l">Back</a>
+            <h1 class="results-header"></h1>
+        </div>
+        <div class="results"></div>
+    </div>
+
+    <!-- Choice Content -->
+    <div data-role="page" id="choice-content">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#" data-rel="back" onclick="console.log('Going back!');" data-icon="arrow-l">Back</a>
+            <h1class ="choice-header"></h1>
+        </div>
+        <div class="choice-content"></div>
+    </div>
+
+    <!-- Settings page -->
+    <div data-role="page" id="settings">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#" data-rel="back" onclick="console.log('Going back!');" data-icon="arrow-l">Back</a>
+            <h1 class="content-header">Settings</h1>
+        </div>
+        <div data-role="content" class="settings-content"></div>
+    </div>
+    <script>
+    $("#main").on("pageinit", function(){
+        $("#btnChoicePopup").click(function(){
+            $("#choicePopup").popup("open", {transition:"slideup"});
+        });
+        $("#btnAgain").click(function(){
+            alert("You clicked again");
+        });
+    });
+
+    $("#settings").on("pageinit", function(){
+        //for (var i=0;i<results.rows.length;i++) {
+        content = '<form>';
+        content += '<div data-role="fieldcontain" data-mini="true">' +
+            '<label for="0">Test Label</label>' +
+            '<select name="0" id="0" data-role="slider" data-mini="true">' +
+            '<option value="off">No</option>' +
+            '<option value="on">Yes</option>' +
+            '</select>' +
+            '</div>';
+        //}
+        content += '</form>';
+        $("div.settings-content").html(content).trigger("create");
+    });
+    </script>
+</body>
+</html>
+

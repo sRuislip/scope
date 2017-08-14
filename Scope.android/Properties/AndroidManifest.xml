@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Scope.Scope" android:versionCode="2" android:versionName="2.0" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+	<uses-permission android:name="com.android.voicemail.permission.WRITE_VOICEMAIL" />
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<application android:label="Scope" android:icon="@drawable/Icon"></application>
+</manifest>

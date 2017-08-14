@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>firebase DB Admin</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <style type="text/css">form { display: block; }ul { border-top: 1px solid #eee; border-bottom: 1px solid #eee; }#recordTemplate { display: none; }a { color: red; display: inline-block; padding: 2px; border: 1px solid #ddd; }a:hover { background-color: #ffc; }.containerFiles{position: relative;}.inputUrl{position: absolute;top:0;left:0;z-index:2;}.inputFile{position: absolute;top:2px;left:43px;}.ui-corner-all {-webkit-border-radius: .3125em;border-radius: .3125em;}</style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js" ></script > 
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.5/firebase.js"></script >
+</head> 
+<body> 
+    <header>
+        <h1 style="display:unset;">Firebase - Admin</h1>
+        <h3 id="nameFirebase"></h3> &nbsp;<button id="btnMyModal" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="padding:1px; display: none;"> &nbsp;import&nbsp; </button>
+        <div id="loader1" style="display: none; border: 0;" align="center">
+            <figure style="border: 0;">
+                <img class="imgWait" src="" alt="" title="data processing...">
+            </figure>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog" style="position: absolute; top: 10%; left:2%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="btnClose" type="button" class="close ui-corner-all" title="close popup" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title" style="color: blue;">Data json file import</h3>
+                    </div>
+                    <div class="modal-body" style="font-size: 16px;">
+                        <p style="color: blue;">File:</p>
+                        <div class="containerFiles">
+                            <input class="inputFile" id="inputFileJson" name="file" type="file" />
+                            <input class="inputUrl" id="inputUrlJson" name="url" type="text" placeholder="URL" />
+                        </div><br /><br />
+                        <p style="color: blue;">Option:</p>
+                        <p>
+                            <div class="radio">
+                                <label><input type="radio" name="opcion" id="complete" value="complete" checked><b>Complete</b>. All data at specific path will be overwritten.</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opcion" id="incremental" value="incremental"><b>Incremental</b>. Add data.</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="opcion" id="merge" value="merge"><b>Merge</b>. Write the top-level children without overwriting the whole parent (Add data and data update).</label>
+                            </div>
+                        </p>
+                    </div>
+                    <div id="loader2" style="display: none; border: 0;" align="center">
+                        <figure style="border: 0;">
+                            <img class="imgWait" src="" alt="" title="data processing...">
+                        </figure>
+                    </div>
+                    <div class="modal-footer">
+                        <span id="importMessage" style="color:brown; font-size: 16px; position: absolute; left: 20px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<button id="btnProcess" type="button" class="btn btn-info" data-dismiss="modal"> &nbsp;process&nbsp; </button><button id="btnCancel" type="button" class="btn btn-info" data-dismiss="modal" style="display: none;"> &nbsp;cancel&nbsp; </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="frmDb">
+            <input id="frmDbText" type="text" data-role="none" placeholder="&nbsp;firebase path"> &nbsp;<button id="frmDbButton" type="button" class="btn btn-info btn-lg" style="padding:1px;"> &nbsp;ok&nbsp; </button>
+            <h5 style="color:ButtonShadow; font-size:12px;">e. docs-examples.firebaseio.com. You must set its rules as anonymous.</h5>
+        </form><hr />
+    </header>
+    <section><ul id="records"></ul></section>
+    <section style="display: none;">
+        <ul>
+            <li id="recordTemplate" class="c1">
+                <span></span> &nbsp;&nbsp;<a href="#" title="delete element/node" style="border: 0;" align="center"><img class="imgDelete" alt="" src="" /></a>
+                <ul></ul>
+                <form>
+                    <input type="text" data-role="none" placeholder="&nbsp;key"> &nbsp;<input title="&nbsp;&nbsp;When the &quot;value&quot; is an node, then write in the textbox &quot;default!&quot; (without &quot;&quot;)." type="text" data-role="none" placeholder="&nbsp;value "> &nbsp;<button class="btn btn-info btn-lg" style="padding:1px;"> &nbsp;add/update&nbsp; </button>
+                </form>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>________</p>
+        <p>
+            <span style="color:ButtonShadow; font-size:10px;"><i>Powered by: </i><span style="font-size:14px;"><b>freddy vaca</b> &nbsp;&nbsp;&nbsp;</span><i>Contact information: </i><a href="mailto:transport.distribution@gmail.com">transport.distribution@gmail.com</a></span>
+        </p>
+    </footer>
+    <script id="script0" type="text/javascript">
+        $.getJSON('https://td-epuresources.firebaseio.com/img/favicon/.json', function (d) {
+            var link = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = d;
+            $(document.head).append(link);
+        })
+        $.getJSON('https://td-epuresources.firebaseio.com/img/delete/.json', function (d) {
+            $('style').append('.imgDelete { background-image: url("' + d + '"); background-repeat: no-repeat; width: 12px; height: 14px; }');
+        })
+        $.getJSON('https://td-epuresources.firebaseio.com/img/wait/.json', function (d) {
+            $('style').append('.imgWait { background-image: url("' + d + '"); background-repeat: no-repeat; width: 58px; height: 58px; }');
+        })
+        //$.getJSON("https://td-epuresources.firebaseio.com/html/td-epu01/.json", function (e) {
+        //    $(document.body).append(e)
+        //})
+        //$.getJSON('https://td-epuresources.firebaseio.com/js/td-epu01/.json', function (d) {
+        //    $(document.body).append(d);
+        //})
+        $("#script0").remove();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var rootRef = {},
+                CHUNK_SIZE = 1024 * 1024,
+                OUTSTANDING_WRITE_COUNT = 50,
+                _mode = void 0,
+                _fileJson = void 0,            
+                _obj01 = void 0;                    // reader
+
+            // [assert]
+            var _fn00 = function (condition, message) {
+                if (!condition) {
+                    message = message || "Assertion failed";
+                    if (typeof Error !== "undefined") {
+                        throw new Error(message);
+                    }
+                    throw message; // Fallback
+                }
+            }
+
+            // [errorHandler]
+            var _fn01 = function (evt) {
+                switch (evt.target.error.code) {
+                    case evt.target.error.NOT_FOUND_ERR:
+                        alert('File Not Found!');
+                        break;
+                    case evt.target.error.NOT_READABLE_ERR:
+                        alert('File is not readable');
+                        break;
+                    case evt.target.error.ABORT_ERR:
+                        break; // noop
+                    default:
+                        alert('An error occurred reading this file.');
+                };
+            }
+
+            // [abortRead]
+            var _fn02 = function () { _obj01.abort(); }
+
+            // message deployment import process [displayImportMessage(m)]
+            var _fn03 = function (m) { $("#importMessage").html(m); }
+
+            // [createChunks]
+            var _fn04 = function (ref, json, forceSplit) {
+                var chunkRes = _fn05(ref, json, forceSplit);
+                if (!chunkRes.chunks) {
+                    return [{ ref: ref, json: json }];
+                } else {
+                    return chunkRes.chunks;
+                }
+            }
+
+            // [chunkInternal]
+            var _fn05 = function (ref, json, forceSplit) {
+                var size = 0;
+                var priority = null;
+                var jsonIsObject = json !== null && typeof json === 'object';
+                if (jsonIsObject) {
+                    size += 2; // {}
+                }
+
+                if (jsonIsObject && ('.priority' in json)) {
+                    size += 12; // ".priority":
+                    priority = json['.priority'];
+                    size += json['.priority'].toString().length;
+                }
+
+                var value = json;
+                if (jsonIsObject && ('.value' in json)) {
+                    size += 9; // ".value":
+                    value = json['.value'];
+                }
+
+                if (value === null || typeof value !== 'object') {
+                    // It's a leaf, it can't be chunked.
+                    size += JSON.stringify(value).length;
+                    return { chunks: null, size: size };
+                } else {
+                    // children node.
+                    var chunks = [];
+                    var splitUp = false;
+                    for (var key in json) {
+                        if (key !== '.priority') {
+                            size += key.length + 3;
+
+                            var chunkRes = _fn05(ref.child(key), json[key]);
+                            size += chunkRes.size;
+
+                            if (chunkRes.chunks) {
+                                for (var i = 0; i < chunkRes.chunks.length; i++) {
+                                    chunks.push(chunkRes.chunks[i]);
+                                }
+                                // One of the children had to be broken into chunks.  We have to break all of them.
+                                splitUp = true;
+                            } else {
+                                chunks.push({ ref: ref.child(key), json: json[key] });
+                            }
+                        }
+                    }
+
+                    // Add priority last since it must be added after at least one child.
+                    if (priority !== null) {
+                        chunks.push({ ref: ref, priority: priority });
+                    }
+
+                    if (forceSplit || splitUp || size >= CHUNK_SIZE) {
+                        return { chunks: chunks, size: size };
+                    } else {
+                        return { chunks: null, size: size }
+                    }
+                }
+            }
+
+            // [ChunkUploader]
+            var _fn06 = function (chunks) {
+                this.next = 0;
+                this.chunks = chunks;
+                _fn03('Importing... (may take a while)');
+            }
+
+            _fn06.prototype.go = function (onComplete) {
+                this.onComplete = onComplete;
+
+                for (var i = 0; i < OUTSTANDING_WRITE_COUNT && i < this.chunks.length; i++) {
+                    this.uploadNext();
+                }
+            };
+
+            _fn06.prototype.uploadNext = function () {
+                var chunkNum = this.next, chunk = this.chunks[chunkNum];
+                _fn00(chunkNum < this.chunks.length);
+                this.next++;
+
+                var self = this;
+                var onComplete = function (error) {
+                    if (error) {
+                        //console.log('Error uploading to ' + self.chunks[i].ref.toString() + ': ' + util.inspect(json));
+                        //console.error(error);
+                        _fn03('Error uploading to ' + self.chunks[i].ref.toString() + ': ' + util.inspect(json));
+                        throw error;
+                    }
+
+                    if (chunkNum === self.chunks.length - 1) {
+                        self.onComplete();
+                    } else {
+                        // upload next chunk.
+                        _fn00(self.next === self.chunks.length || self.next === chunkNum + OUTSTANDING_WRITE_COUNT);
+                        if (self.next < self.chunks.length)
+                            self.uploadNext();
+                    }
+                };
+
+                if ('json' in chunk) {
+                    chunk.ref.set(chunk.json, onComplete);
+                } else {
+                    _fn00('priority' in chunk)
+                    chunk.ref.setPriority(chunk.priority, onComplete);
+                }
+            };
+
+            // [uploadChunks]
+            var _fn07 = function (chunks) {
+                var uploader = new _fn06(chunks);
+                uploader.go(function () {
+                    _fn03('Import completed.');
+
+                    $('#btnClose').prop('disabled', false);
+                    $('#loader2').css('display', 'none').hide();
+                    $('#btnCancel').css('display', 'none').hide();
+                    $('.modal-body').css('display', '').show();
+                    $('#btnProcess').css('display', '').show();
+
+                    //$('#records').html("");
+                });
+            }
+
+            $('#inputUrlJson').change(function () {
+                $('#inputFileJson').val('');
+            });
+
+            $('#inputFileJson').change(function () {
+                $('#inputUrlJson').val('');
+            });
+
+            // get anonymously credentials [getAuthData]
+            var _fn08 = function () {
+                var deferred = $.Deferred();
+
+                var authData = rootRef.getAuth();
+                if (authData == null) {
+                    // authenticate the user
+                    rootRef.authAnonymously(function (err, authenticationData) {
+                        if (err) {
+                            alert('Login Failed!', err);
+                        } else {
+                            alert('Authenticated successfully with payload:', authData);
+                        }
+                        //authData = authenticationData
+                        deferred.resolve(authenticationData);
+                    });
+                } else {
+                    deferred.resolve(authData);
+                }
+
+                return deferred.promise();
+            };
+
+            // get firebase data path [getFirebaseDb]
+            var _fn09 = function() {
+                var myFirebase = $('#frmDbText').val();
+                $('#nameFirebase').html(myFirebase);
+                $('#loader1').css('display', '').show();
+                $('#frmDb').remove();
+
+                rootRef = new Firebase('https://' + myFirebase);
+                _fn08().then(function (authData) {
+                    rootRef.on('child_added', _fn11);
+                })
+            }
+
+            // activate popup import data
+            $('#btnMyModal').on('click', function() {
+                $('#myModal').attr('class', 'modal');
+                $('#importMessage').html('');
+                $('#myModal').show();
+            });
+
+            // close popup import data
+            $('.close').on('click', function () {
+                $('#inputFileJson').val('');
+                $('#inputUrlJson').val('');
+                $('#myModal').attr('class', 'modal fase');
+                $('#myModal').hide();
+            });
+
+            // activate import start process
+            $('#btnProcess').on('click', function () {
+                if (!$('#inputFileJson').val() && !$('#inputUrlJson').val()) {
+                    _fn03('you must enter a file name');
+                    return;
+                }
+
+                _mode = $('input[name=opcion]').filter(':checked').val();
+
+                if ($('#inputFileJson').val()) {
+                    //_fileJson = $('#inputFileJson')[0];
+                    _fileJson = $('#inputFileJson').get(0).files[0];
+
+                    _obj01 = new FileReader();
+                    _obj01.onerror = _fn01;           // errorHandler;
+                    _obj01.onabort = function (e) {
+                        alert('File read cancelled');
+                    };
+                    _obj01.onloadstart = function (e) {
+                        //alert('loading');
+                    };
+                    _obj01.onload = function (e) {
+                        _fn10(e.target.result, _mode);
+                    }
+                    _obj01.readAsText(_fileJson);
+
+                } else {
+                    _fileJson = $('#inputUrlJson').val();
+                    $.getJSON(_fileJson, function (d) {
+                        _fn10(JSON.stringify(d), _mode);
+                    })
+                }
+
+                $('#importMessage').html('');
+                $('#btnClose').prop('disabled', true);
+                $('.modal-body').css('display', 'none').hide();
+                $('#btnProcess').css('display', 'none').hide();
+                $('#loader2').css('display', '').show();
+                $('#btnCancel').css('display', '').show();
+
+                return;
+            });
+
+            // activate cancel import process
+            $('#btnCancel').on('click', function () {
+                // stop process
+
+                _fn03('process canceled!');
+
+                $('#btnClose').prop('disabled', false);
+                $('#loader2').css('display', 'none').hide();
+                $('#btnCancel').css('display', 'none').hide();
+                $('.modal-body').css('display', '').show();
+                $('#btnProcess').css('display', '').show();
+
+                return;
+            });
+
+            // import start process [ImportStart(data, mode)]
+            var _fn10 = function (d, m) {
+                var o = void 0,                                       // json object
+                    clearFirst = true,
+                    splitTopLevel = false,
+                    chunks = void 0;
+
+                // validation json object
+                try {
+                    o = $.parseJSON(d);
+                }
+                catch (err) {
+                    _fn03(err);
+                    $('#btnClose').prop('disabled', false);
+                    $('#loader2').css('display', 'none').hide();
+                    $('#btnCancel').css('display', 'none').hide();
+                    $('.modal-body').css('display', '').show();
+                    $('#btnProcess').css('display', '').show();
+                    return;
+                }
+
+                // import process
+                switch (m) {
+                    case "complete":
+                        break;
+
+                    case "incremental":
+                        //clearFirst = false;
+                        //// Need to split into chunks at the top level to 
+                        //// ensure we don't overwrite the parent.
+                        //splitTopLevel = true;
+                        //break;
+
+                    case "merge":
+                        clearFirst = false;
+
+                        // Need to split into chunks at the top level to 
+                        // ensure we don't overwrite the parent.
+                        splitTopLevel = true;
+                        break;
+                }
+
+
+                chunks = _fn04(rootRef, o, splitTopLevel);
+
+                if (clearFirst) {
+                    rootRef.remove(function (error) {
+                        if (error) throw (error);
+                        $('#records').html("");
+                        _fn07(chunks);                       
+                    });
+                } else {
+                    _fn07(chunks);
+                }
+            }
+
+            // load data [readReg]
+            var _fn11 = function(snapshot) {
+                var message = snapshot.val();
+
+                if (!message) {
+                    alert("Read Failed!");
+                    return;
+                }
+
+                _fn12(snapshot.key(), snapshot.key(), '');
+
+                $.each(message, function (key) {                                            // key level 1
+                    var obj = message[key],                                                 // object or value
+                        keyId = snapshot.key() + '¦' + key;
+
+                    if (!(typeof obj === 'object')) {                                              // is Object
+                        _fn12(keyId, key + ": " + obj, snapshot.key());
+
+                    } else {
+                        _fn12(keyId, key, snapshot.key());
+
+                        $.each(obj, function (k) {                                          // key level 2
+                            var o = obj[k],                                                 // object or value
+                                kId = keyId + '¦' + k;
+
+                            if (!(typeof o === 'object')) {                                        // is Object
+                                _fn12(kId, k + ': ' + o, keyId);
+
+                            } else {
+                                _fn12(kId, k, keyId);
+
+                                $.each(o, function (e) {                                    // key level 3
+                                    var v = o[e],                                           // object or value
+                                        eId = kId + '¦' + e;
+
+                                    if (!(typeof v === 'object')) {                                // is Object
+                                        _fn12(eId, e + ': ' + v, kId);
+
+                                    } else {
+                                        _fn12(eId, e, kId);
+
+                                        $.each(v, function (m) {                        // key level 4
+                                            var u = v[m],                               // value
+                                                mId = eId + '¦' + m;
+
+                                            if (!(typeof u === 'object')) {
+                                                _fn12(mId, m + ': ' + u, eId);
+
+                                            } else {
+                                                _fn12(mId, m, eId);
+
+                                                $.each(u, function (n) {                // key level 5
+                                                    var g = u[n],                       // value
+                                                        nId = mId + '¦' + n;
+
+                                                    if (!(typeof g === 'object')) {
+                                                        _fn12(nId, n + ': ' + g, mId);
+
+                                                    } else {
+                                                        _fn12(nId, n, mId);
+
+                                                        $.each(g, function (w) {                // key level 6
+                                                            var t = g[w],                       // value
+                                                                wId = nId + '¦' + n;
+
+                                                            if (!(typeof t === 'object')) {
+                                                                _fn12(wId, w + ': ' + t, nId);
+
+                                                            } else {
+                                                                _fn12(wId, w, nId);
+
+                                                                $.each(t, function (z) {                // key level 7
+                                                                    var f = t[z],                       // value
+                                                                        zId = wId + '¦' + z;
+
+                                                                    if (!(typeof f === 'object')) {
+                                                                        _fn12(zId, z + ': ' + f, wId);
+
+                                                                    } else {
+                                                                        _fn12(zId, z, wId);
+
+                                                                        $.each(f, function (h) {                // key level 8
+                                                                            var p = f[h],                       // value
+                                                                                hId = zId + '¦' + h;
+
+                                                                            if (!(typeof p === 'object')) {
+                                                                                _fn12(hId, h + ': ' + p, zId);
+
+                                                                            } else {
+                                                                                _fn12(hId, h, zId);
+
+                                                                                $.each(p, function (r) {                // key level 9
+                                                                                    var q = p[r],                       // value
+                                                                                        rId = hId + '¦' + r;
+
+                                                                                    if (!(typeof q === 'object')) {
+                                                                                        _fn12(rId, r + ': ' + q, hId);
+
+                                                                                    } else {
+                                                                                        _fn12(rId, r, hId);
+
+                                                                                        $.each(q, function (d) {                // key level 10
+                                                                                            var s = q[d],                       // value
+                                                                                                dId = rId + '¦' + d;
+
+                                                                                            _fn12(dId, d + ': ' + s, rId);
+                                                                                        })
+                                                                                    }
+                                                                                })
+                                                                            }
+                                                                        })
+                                                                    }
+                                                                })
+                                                            }
+                                                        })
+                                                    }
+                                                })
+                                            }
+                                        })
+                                    }
+                                })
+                            }
+                        })
+                    }
+                })
+
+                $('#loader1').css('display', 'none').hide();
+                $('#btnMyModal').css('display', '');                
+            }
+
+            // delete record when a tag is clicked
+            $('body').on('click', 'a', function () {
+                var $rec = $(this).closest('[data-id]');
+                var id = $rec.attr('data-id') || null;
+                if (id) {
+                    // remove the record and the document element
+                    _fn08().then(function (authData) {
+                        rootRef.child(id.replace(/\¦/g, '/')).remove(function (error) {
+                            if (error) {
+                                alert('Data could not be removed.' + error);
+                            } else {
+                                $rec.remove();
+                                alert('Data removed successfully.');
+                            }
+                        });
+                    })
+                }
+                return false;
+            });
+
+            // add new records at the appropriate level when a button is clicked
+            $('body').on('click', 'button', function () {
+                if ($(this).attr('id') === 'frmDbButton') {
+                    _fn09();
+                    return false;
+                }
+
+                if ( ('btnCancelbtnProcessbtnMyModal').indexOf($(this).attr('id')) > -1 ) {
+                    return false;
+                }
+
+                var $inputValue = $(this).prev('input'),
+                    $inputKey = $inputValue.prev('input'),
+                    itemKey = $inputKey.val(),
+                    itemValue = $inputValue.val(),
+                    parent = $inputKey.closest('[data-id]').attr('data-id') || null;
+
+                if (itemKey && itemValue) {
+                    var path = parent.replace(/\¦/g, '/'),
+                        data = $.parseJSON(itemValue !== 'default!' ? '{ "' + itemKey + '": "' + itemValue + '" }' : '{ "' + itemKey + '": { "sinValor": "" } }');
+
+                    _fn08().then(function (authData) {
+                        elemntRef = rootRef.child(path)
+                                    .update(data, function (error) {
+                                        if (error) {
+                                            alert('Data could not be saved.' + error);
+                                        } else {
+                                            _fn12(parent + '¦' + itemKey, itemValue === 'default!' ? itemKey : itemKey + ': ' + itemValue, parent);
+                                            alert('Data saved successfully.');
+                                        }
+                                    });
+                    })
+                }
+
+                $inputKey.val('');
+                $inputValue.val('');
+                return false;
+            })
+
+            // [displayTitleMessage]
+            var _fn12 = function(id, title, parentId) {
+                var $parent = parentId ? _fn13(parentId) : $('#records'),
+                    $flag = _fn13(id).length,
+                    $el = $flag ? _fn13(id) : _fn14(title);
+
+                // add a data-parent attribute, which we use to locate parent elements
+                if ($flag)
+                    $el.find('span').text(title);
+                else
+                    $el.appendTo($parent).attr('data-id', id);
+
+                // disable input-value and button-delete
+                if (id.indexOf('¦') === -1) {
+                    $el.find('input').next('input').attr('value', 'default!').hide();
+                    $el.find('a').hide();
+                }
+
+                // disable inputs form
+                if (title.indexOf(': ') > -1) {
+                    $el.find('form').hide();
+                }
+            }
+
+            // [findElement]
+            var _fn13 = function(parentId) {
+                return $('#records').find('[data-id="' + parentId + '"] > ul');
+            }
+
+            // [makeListItem]
+            var _fn14 = function(title) {
+                return $('#recordTemplate').clone()
+                // remove the id attr
+                .attr('id', null)
+                // enter the <span> tag and use .text() to escape title
+                .find('span').text(title)
+                // navigate back to the cloned element and return it
+                .end();
+            }
+        })
+    </script>
+</body> 
+</html>
+        
